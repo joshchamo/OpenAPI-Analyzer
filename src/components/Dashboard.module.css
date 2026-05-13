@@ -1,0 +1,110 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  background: white;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  background: var(--card-border);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+}
+
+.activeTab .badge {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.infoSection {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 2.5rem;
+  border-radius: 24px;
+}
+
+.infoCard h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.version {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.authBox h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.codeBlock {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-family: 'Monaco', monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  border: 1px solid var(--card-border);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

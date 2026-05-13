@@ -1,0 +1,138 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.method {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  color: white;
+  min-width: 60px;
+  text-align: center;
+}
+
+.path {
+  flex: 1;
+  font-family: 'Monaco', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary {
+  padding: 0 1.25rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.details {
+  padding: 1.25rem;
+  border-top: 1px solid var(--card-border);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.paramList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.paramItem {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+}
+
+.paramHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.paramIn {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--card-border);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.required {
+  font-size: 0.7rem;
+  color: var(--error);
+  font-weight: 600;
+}
+
+.paramDesc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.code {
+  font-size: 0.8rem;
+  background: black;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.responseList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.responseItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.status {
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.success { background: rgba(16, 185, 129, 0.1); color: var(--success); }
+.error { background: rgba(239, 68, 68, 0.1); color: var(--error); }
+
+.responseDesc {
+  color: var(--text-muted);
+}
