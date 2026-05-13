@@ -1,4 +1,4 @@
-import { dereference, OpenAPI } from "@readme/openapi-parser";
+import { dereference } from "@readme/openapi-parser";
 import { AnalyzedSpec, EndpointInfo, ParameterInfo, ResponseInfo } from "./types";
 
 export async function parseOpenApiSpec(url: string): Promise<AnalyzedSpec> {
@@ -16,14 +16,14 @@ export async function parseOpenApiSpec(url: string): Promise<AnalyzedSpec> {
     // Dereference the spec object
     const api = await dereference(spec);
     
-    return transformSpec(api);
+    return transformSpec(api as any);
   } catch (error) {
     console.error("Error parsing OpenAPI spec:", error);
     throw new Error(error instanceof Error ? error.message : "Failed to parse spec");
   }
 }
 
-function transformSpec(api: OpenAPI.Document): AnalyzedSpec {
+function transformSpec(api: any): AnalyzedSpec {
   const endpoints: EndpointInfo[] = [];
   
   if (api.paths) {
@@ -44,8 +44,8 @@ function transformSpec(api: OpenAPI.Document): AnalyzedSpec {
           }));
 
           // Include path-level parameters
-          if (pathItem.parameters) {
-            pathItem.parameters.forEach((p: any) => {
+          if ((pathItem as any).parameters) {
+            (pathItem as any).parameters.forEach((p: any) => {
               if (!parameters.find(existing => existing.name === p.name && existing.in === p.in)) {
                 parameters.push({
                   name: p.name,

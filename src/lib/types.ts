@@ -1,7 +1,9 @@
-import { OpenAPI } from "@readme/openapi-parser";
+import { OpenAPIV3, OpenAPIV3_1, OpenAPIV2 } from "openapi-types";
+
+export type SpecInfo = OpenAPIV3.InfoObject | OpenAPIV3_1.InfoObject | OpenAPIV2.InfoObject;
 
 export interface AnalyzedSpec {
-  info: OpenAPI.Document["info"];
+  info: SpecInfo;
   version: string;
   endpoints: EndpointInfo[];
   schemas: Record<string, any>;
