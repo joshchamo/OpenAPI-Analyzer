@@ -76,10 +76,22 @@ export const EndpointCard: React.FC<EndpointCardProps> = ({ endpoint }) => {
             <div className={styles.responseList}>
               {endpoint.responses.map((r, i) => (
                 <div key={i} className={styles.responseItem}>
-                  <span className={`${styles.status} ${r.code.startsWith('2') ? styles.success : styles.error}`}>
-                    {r.code}
-                  </span>
-                  <span className={styles.responseDesc}>{r.description}</span>
+                  <div className={styles.responseRow}>
+                    <span className={`${styles.status} ${r.code.startsWith('2') ? styles.success : styles.error}`}>
+                      {r.code === 'default' ? 'Default' : r.code}
+                    </span>
+                    <span className={styles.responseDesc}>{r.description}</span>
+                  </div>
+                  {r.content && Object.entries(r.content).map(([contentType, content]: [string, any]) => (
+                    <div key={contentType} className={styles.contentBox}>
+                      <span className={styles.contentType}>{contentType}</span>
+                      {content.schema && (
+                        <span className={styles.schemaRef}>
+                          Schema: {content.schema.title || content.schema.$ref?.split('/').pop() || 'Inline Object'}
+                        </span>
+                      )}
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

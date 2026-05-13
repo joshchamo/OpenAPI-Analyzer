@@ -20,9 +20,9 @@ export const UrlInput: React.FC<UrlInputProps> = ({ onAnalyze, isLoading }) => {
   };
 
   const suggestions = [
+    { name: "Cloudflare", url: "https://raw.githubusercontent.com/cloudflare/cloudflare-openapi/main/openapi.json" },
     { name: "Stripe", url: "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json" },
     { name: "OpenAI", url: "https://raw.githubusercontent.com/openai/openai-openapi/manual_spec/openapi.yaml" },
-    { name: "GitHub", url: "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghes-3.1/ghes-3.1.json" },
     { name: "NASA", url: "https://api.apis.guru/v2/specs/nasa.gov/apod/1.0.0/openapi.json" },
     { name: "Twilio", url: "https://raw.githubusercontent.com/twilio/twilio-oai/main/spec/yaml/twilio_messaging_v1.yaml" },
     { name: "Petstore", url: "https://petstore.swagger.io/v2/swagger.json" }
