@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "./SchemaCard.module.css";
+import { SchemaTable } from "./SchemaTable";
 
 interface SchemaCardProps {
   name: string;
@@ -17,29 +18,7 @@ export const SchemaCard: React.FC<SchemaCardProps> = ({ name, schema }) => {
       </div>
       <div className={styles.body}>
         {schema.description && <p className={styles.description}>{schema.description}</p>}
-        
-        {schema.properties && (
-          <div className={styles.properties}>
-            {Object.entries(schema.properties).map(([propName, prop]: [string, any]) => (
-              <div key={propName} className={styles.property}>
-                <div className={styles.propHeader}>
-                  <span className={styles.propName}>{propName}</span>
-                  <span className={styles.propType}>{prop.type || "any"}</span>
-                  {schema.required?.includes(propName) && (
-                    <span className={styles.required}>*</span>
-                  )}
-                </div>
-                {prop.description && <p className={styles.propDesc}>{prop.description}</p>}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {!schema.properties && (
-          <pre className={styles.raw}>
-            {JSON.stringify(schema, null, 2)}
-          </pre>
-        )}
+        <SchemaTable schema={schema} />
       </div>
     </div>
   );

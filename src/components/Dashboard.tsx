@@ -59,7 +59,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ spec }) => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              className={styles.grid}
+              className={styles.stack}
             >
               {Object.entries(spec.schemas).map(([name, schema]) => (
                 <SchemaCard key={name} name={name} schema={schema} />

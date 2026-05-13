@@ -1,0 +1,99 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.table th {
+  background: var(--card-border);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.row {
+  border-bottom: 1px solid var(--card-border);
+  transition: background 0.2s ease;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nameCell {
+  padding: 0.75rem 1rem;
+  font-family: 'Monaco', monospace;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.name {
+  color: var(--foreground);
+}
+
+.required {
+  color: var(--error);
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.typeCell {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+}
+
+.typeBadge {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.format {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+
+.descCell {
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  min-width: 250px;
+}
+
+.noDesc {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.enumList {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.raw {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}

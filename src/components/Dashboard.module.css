@@ -51,6 +51,12 @@
   gap: 1.5rem;
 }
 
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .infoSection {
   max-width: 800px;
   margin: 0 auto;
