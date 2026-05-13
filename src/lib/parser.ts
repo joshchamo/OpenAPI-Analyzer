@@ -1,5 +1,6 @@
 import { dereference } from "@readme/openapi-parser";
 import { AnalyzedSpec, EndpointInfo, ParameterInfo, ResponseInfo } from "./types";
+import yaml from "js-yaml";
 
 export async function parseOpenApiSpec(
   url: string, 
@@ -20,15 +21,16 @@ export async function parseOpenApiSpec(
 
     let spec;
     try {
-      spec = JSON.parse(content);
-      onLog?.("Detected JSON format", "info");
+      onLog?.("Parsing specification content...", "info");
+      spec = yaml.load(content);
+      onLog?.("Content parsed successfully as JS object", "success");
     } catch (e) {
-      onLog?.("Detected YAML format (parsing as text)", "info");
-      spec = content; // SwaggerParser handles strings as well
+      onLog?.(`Parsing error: ${e instanceof Error ? e.message : String(e)}`, "error");
+      throw new Error("Failed to parse spec content as JSON or YAML");
     }
     
     onLog?.("Dereferencing specification...", "info");
-    const api = await dereference(spec);
+    const api = await dereference(spec as any);
     onLog?.("Successfully dereferenced spec", "success");
     
     return transformSpec(api as any);
