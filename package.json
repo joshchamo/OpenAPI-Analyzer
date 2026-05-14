@@ -12,6 +12,10 @@
     "schema-viewer",
     "specification",
     "rest-api",
+    "api-contract",
+    "contract-testing",
+    "linter",
+    "api-auditing",
     "developer-tools"
   ],
   "scripts": {
