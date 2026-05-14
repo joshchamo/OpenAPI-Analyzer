@@ -14,7 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "OpenSpec | Premium OpenAPI & Swagger Explorer",
-  description: "OpenSpec is a high-performance explorer for OpenAPI and Swagger specifications. Designed for QA engineers and developers to validate, inspect, and document API contracts with precision.",
+  description: "High-performance API contract validation and inspection tool. Parse, validate, and explore Mega APIs like GitHub, Stripe, and Cloudflare in seconds.",
+  keywords: ["openapi", "swagger", "api-validation", "qa-testing", "contract-testing", "api-explorer", "schema-viewer"],
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

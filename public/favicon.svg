@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#0f172a"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="white" stroke-opacity="0.1"/>
+  <text x="6" y="22" font-family="monospace" font-size="20" font-weight="300" fill="#94a3b8">{</text>
+  <text x="21" y="22" font-family="monospace" font-size="20" font-weight="300" fill="#94a3b8">}</text>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <text x="12" y="22" font-family="monospace" font-size="22" font-weight="800" fill="url(#grad)" transform="rotate(-3 16 16)">/</text>
+</svg>
