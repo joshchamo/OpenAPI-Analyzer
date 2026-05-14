@@ -38,10 +38,11 @@ export function generateQualityReport(spec: AnalyzedSpec): QualityReport {
     const hasDefault = ep.responses.some(r => r.code === "default");
 
     if (!hasExplicitSuccess && !hasDefault) {
+      const foundCodes = ep.responses.map(r => r.code).join(", ");
       issues.push({
         severity: "error",
         category: "Best Practice",
-        message: "No success response defined (missing 2xx and 'default')",
+        message: `No success response defined (missing 2xx and 'default'). Found: ${foundCodes || "None"}`,
         location: loc
       });
     } else if (!hasExplicitSuccess && hasDefault) {
