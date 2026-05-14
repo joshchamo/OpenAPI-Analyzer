@@ -9,8 +9,10 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <button className={styles.logo} onClick={() => window.location.href = "/"}>
-          <div className={styles.iconWrapper}>
-            <Zap className={styles.icon} size={24} />
+          <div className={styles.logoIcon}>
+            <span className={styles.bracket}>{"{"}</span>
+            <span className={styles.slash}>/</span>
+            <span className={styles.bracket}>{"}"}</span>
           </div>
           <h1>Open<span className={styles.gradientText}>Spec</span></h1>
         </button>
