@@ -13,12 +13,12 @@ Built for QA engineers, developers, and security analysts, OpenSpec transforms c
 ### 🔍 Advanced Exploration
 - **Tag-Based Grouping**: Automatically organizes hundreds of endpoints into logical, collapsible folder categories (e.g., `repos`, `issues`, `users`).
 - **Global Search**: Instantly filter endpoints and schemas by path, method, name, or tag.
-- **Recursive Schema Tables**: Professional property rendering (Name, Type, Required, Description) that mimics industry-standard documentation tools like Redoc.
+- **Recursive Schema Tables**: Professional property rendering (Name, Type, Required, Description) consistent with industry standards established by tools like Redoc and Swagger UI.
 
 ### 🛠 Professional QA Utility
 - **Debug Console**: Real-time logging of the fetch, parse, and dereference lifecycle.
 - **Performance Metrics**: Step-by-step timing (+Xms) to analyze the scale and complexity of large specifications.
-- **Contract Validation**: Clearly highlights required fields, enums, and nested data structures to ensure contract compliance.
+- **Contract Inspection**: Clearly highlights required fields, enums, and nested data structures to ensure manual contract audit precision.
 
 ### 🌐 High-Scale Support
 - **YAML & JSON Support**: Native handling of both formats via robust internal conversion.
