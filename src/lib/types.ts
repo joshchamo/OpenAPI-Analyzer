@@ -16,6 +16,7 @@ export interface EndpointInfo {
   summary?: string;
   description?: string;
   operationId?: string;
+  tags: string[];
   parameters: ParameterInfo[];
   requestBody?: any;
   responses: ResponseInfo[];

@@ -87,6 +87,7 @@ function transformSpec(api: any): AnalyzedSpec {
             summary: operation.summary,
             description: operation.description,
             operationId: operation.operationId,
+            tags: operation.tags || ["Other"],
             parameters,
             requestBody: operation.requestBody,
             responses,
