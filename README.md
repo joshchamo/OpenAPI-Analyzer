@@ -25,7 +25,9 @@ Built for QA engineers, developers, and security analysts, OpenSpec transforms c
 ---
 
 ### 🏆 Real-World Impact: The Petstore Audit
-During validation of the official [Petstore Swagger 2.0 spec](https://petstore.swagger.io/v2/swagger.json), OpenSpec identified undocumented success responses on core endpoints including `POST /pet` and `DELETE /pet/{petId}`. While these gaps are silently ignored by standard documentation viewers, they represent genuine API contract issues that break automated code generation and result in incomplete QA test coverage.
+During validation of the official [Petstore Swagger 2.0 spec](https://petstore.swagger.io/v2/swagger.json), OpenSpec identified **missing success responses** on core endpoints. For example, `POST /pet` defines only a `405` response, and `DELETE /pet/{petId}` defines only `400` and `404`. No success response of any kind is present in the underlying specification.
+
+Standard documentation viewers silently paper over these gaps. **OpenSpec surfaces them as contract errors**, providing the evidence engineers need for complete test coverage and accurate code generation.
 
 ---
 
