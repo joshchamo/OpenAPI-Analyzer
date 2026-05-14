@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { QualityReport as QualityReportType } from "@/lib/types";
-import { AlertTriangle, AlertCircle, Info, CheckCircle2, ShieldAlert } from "lucide-react";
+import { AlertTriangle, AlertCircle, Info, CheckCircle2, ShieldAlert, Download } from "lucide-react";
 import styles from "./QualityReport.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,6 +19,27 @@ export const QualityReport: React.FC<QualityReportProps> = ({ report }) => {
     if (filter === "all") return report.issues;
     return report.issues.filter(issue => issue.severity === filter);
   }, [report.issues, filter]);
+
+  const downloadCSV = () => {
+    const headers = ["Severity", "Category", "Location", "Message"];
+    const rows = report.issues.map(i => [
+      i.severity.toUpperCase(),
+      i.category,
+      `"${i.location.replace(/"/g, '""')}"`,
+      `"${i.message.replace(/"/g, '""')}"`
+    ]);
+    
+    const csvContent = [headers, ...rows].map(e => e.join(",")).join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "openspec-quality-report.csv");
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className={styles.container}>
@@ -76,6 +97,10 @@ export const QualityReport: React.FC<QualityReportProps> = ({ report }) => {
             {filter === "all" ? "All Issues" : `${filter.charAt(0).toUpperCase() + filter.slice(1)}s`}
             <span className={styles.countBadge}>{filteredIssues.length}</span>
           </h3>
+          <button className={styles.downloadBtn} onClick={downloadCSV}>
+            <Download size={18} />
+            <span>Download Report (CSV)</span>
+          </button>
         </div>
 
         <AnimatePresence mode="popLayout">

@@ -19,7 +19,8 @@ Built for QA engineers, developers, and security analysts, OpenSpec transforms c
 - **Debug Console**: Real-time logging of the fetch, parse, and dereference lifecycle.
 - **Performance Metrics**: Step-by-step timing (+Xms) to analyze the scale and complexity of large specifications.
 - **Contract Validation**: Automated **Spec Quality Report** (Linter) that audits specifications for missing documentation, safety gaps (missing error responses), and industry best practices.
-- **Precision Auditing**: Clearly highlights required fields, enums, and nested data structures with a real-time quality score.
+- **Download & Export**: Export full quality findings as a **CSV report** for integration with Jira, Confluence, or internal audit documentation.
+- **Precision Auditing**: Clearly highlights required fields, enums, and nested data structures with a real-time filtered issue list.
 
 ### 🌐 High-Scale Support
 - **YAML & JSON Support**: Native handling of both formats via robust internal conversion.

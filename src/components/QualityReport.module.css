@@ -86,6 +86,28 @@
   color: var(--text-muted);
 }
 
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.downloadBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.downloadBtn:active {
+  transform: translateY(0);
+}
+
 .issues {
   display: flex;
   flex-direction: column;
