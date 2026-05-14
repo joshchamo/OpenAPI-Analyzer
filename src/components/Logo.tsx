@@ -3,22 +3,18 @@ import React from 'react';
 export const Logo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <svg 
-      width="42" 
-      height="30" 
-      viewBox="0 0 42 30" 
+      width="36" 
+      height="26" 
+      viewBox="0 0 36 26" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Glassy Background Container */}
-      <rect width="42" height="30" rx="10" fill="white" fillOpacity="0.05"/>
-      <rect x="0.5" y="0.5" width="41" height="29" rx="9.5" stroke="white" strokeOpacity="0.1"/>
+      <rect width="36" height="26" rx="8" fill="white" fillOpacity="0.05"/>
+      <rect x="0.5" y="0.5" width="35" height="25" rx="7.5" stroke="white" strokeOpacity="0.1"/>
       
-      {/* Decorative Shimmer Line */}
-      <path d="M5 5L37 25" stroke="white" strokeOpacity="0.05" strokeWidth="0.5"/>
-
       <defs>
-        <linearGradient id="logoGrad" x1="0" y1="0" x2="42" y2="30" gradientUnits="userSpaceOnUse">
+        <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="26" gradientUnits="userSpaceOnUse">
           <stop stopColor="#6366f1"/>
           <stop offset="1" stopColor="#a855f7"/>
         </linearGradient>
@@ -26,8 +22,8 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
 
       {/* Left Bracket */}
       <text 
-        x="4" 
-        y="21" 
+        x="6" 
+        y="18.5" 
         fontFamily="'Monaco', 'Courier New', monospace" 
         fontSize="18" 
         fontWeight="300" 
@@ -38,8 +34,8 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
 
       {/* Right Bracket */}
       <text 
-        x="32" 
-        y="21" 
+        x="24" 
+        y="18.5" 
         fontFamily="'Monaco', 'Courier New', monospace" 
         fontSize="18" 
         fontWeight="300" 
@@ -48,15 +44,15 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
         {"}"}
       </text>
 
-      {/* Central Slash - Positioned to nearly touch corners for 'S' shape */}
+      {/* Central Slash - Optimized for 'S' flow */}
       <text 
-        x="15" 
-        y="22" 
+        x="12" 
+        y="19" 
         fontFamily="'Monaco', 'Courier New', monospace" 
-        fontSize="22" 
+        fontSize="19" 
         fontWeight="800" 
         fill="url(#logoGrad)" 
-        transform="rotate(-5 21 15)"
+        transform="rotate(-2 18 13)"
       >
         /
       </text>
