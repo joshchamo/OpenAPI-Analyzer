@@ -1,4 +1,4 @@
-# OpenSpec | Premium OpenAPI & Swagger Explorer
+# OpenSpec | OpenAPI & Swagger Explorer
 
 **OpenSpec** is a high-performance, professional-grade web application designed to parse, validate, and explore OpenAPI (3.x) and Swagger (2.0) specifications with precision. 
 
