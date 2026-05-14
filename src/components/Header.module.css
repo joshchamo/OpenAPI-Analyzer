@@ -40,56 +40,6 @@
   }
 }
 
-.logoIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  gap: 2px;
-  font-family: 'Monaco', 'Courier New', monospace;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.logoIcon::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-  transform: rotate(45deg);
-}
-
-.bracket {
-  color: var(--text-muted);
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.slash {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0 -4.5px;
-  transform: rotate(-3deg);
-}
-
 .logo h1 {
   font-size: 1.25rem;
   font-weight: 700;
